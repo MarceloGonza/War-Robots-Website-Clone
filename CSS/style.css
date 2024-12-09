@@ -1,36 +1,48 @@
 * {
   color: white;
   background-color: rgb(36, 36, 39);
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+header {
+  background-color: rgb(21, 21, 20);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alinea verticalmente los elementos dentro del nav */
+  align-items: center;
   padding: 0px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
-  width: 8%;
-  height: auto; /* Ajusta proporcionalmente la altura */
+  width: 7%;
+  height: auto;
+  margin-left: 10px;
 }
 
 .lista {
-  flex-grow: 1; /* Hace que este contenedor ocupe el espacio disponible entre los elementos */
+  flex-grow: 1;
   text-align: center;
 }
 
 .navList {
   display: flex;
   list-style: none;
-  justify-content: center; /* Centra los elementos dentro de este contenedor */
+  justify-content: center;
   margin: 0;
   padding: 0;
+  gap: 35px;
 }
 
 li {
-  margin: 15px;
+  margin: 2px;
 }
 
 nav div:last-child {
@@ -41,19 +53,35 @@ nav div:last-child {
 }
 
 .logoP {
-  width: 20px; /* Mantén el tamaño original del logoP */
-  height: 20px;
+  width: 17px; /* Mantén el tamaño original del logoP */
+  height: 17px;
 }
-
+.logoF {
+  width: 10px;
+  height: 10px;
+}
 button {
-  padding: 20px 20px;
-  background-color: yellow;
+  padding: 21px 33px;
+  background-color: rgb(248, 212, 8);
   color: black;
+  font-weight: 600;
 }
 
 .imagenPrincipal {
-  width: 100%; /* La imagen ocupará el 100% del ancho */
-  height: 100%; /* La imagen ocupará el 100% del alto */
-  object-fit: cover; /* Ajusta la imagen para cubrir completamente el espacio */
-  display: block; /* Elimina el espacio extra generado por imágenes como elementos inline */
+  width: 100%;
+  height: 100%;
+  margin-top: -70px;
+  position: relative;
+  z-index: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 13px;
+}
+span {
+  gap: 10px;
+  padding: 10px 5px;
+  position: relative;
+  bottom: 3px;
 }
