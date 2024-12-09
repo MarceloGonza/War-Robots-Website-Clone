@@ -1,0 +1,59 @@
+* {
+  color: white;
+  background-color: rgb(36, 36, 39);
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinea verticalmente los elementos dentro del nav */
+  padding: 0px;
+}
+
+.logo {
+  width: 8%;
+  height: auto; /* Ajusta proporcionalmente la altura */
+}
+
+.lista {
+  flex-grow: 1; /* Hace que este contenedor ocupe el espacio disponible entre los elementos */
+  text-align: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  justify-content: center; /* Centra los elementos dentro de este contenedor */
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 15px;
+}
+
+nav div:last-child {
+  display: flex; /* Configura el contenedor como flexbox */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  justify-content: space-between; /* Espacia los elementos horizontalmente */
+  gap: 10px; /* Espaciado entre el logoP y el botón */
+}
+
+.logoP {
+  width: 20px; /* Mantén el tamaño original del logoP */
+  height: 20px;
+}
+
+button {
+  padding: 20px 20px;
+  background-color: yellow;
+  color: black;
+}
+
+.imagenPrincipal {
+  width: 100%; /* La imagen ocupará el 100% del ancho */
+  height: 100%; /* La imagen ocupará el 100% del alto */
+  object-fit: cover; /* Ajusta la imagen para cubrir completamente el espacio */
+  display: block; /* Elimina el espacio extra generado por imágenes como elementos inline */
+}
