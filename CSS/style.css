@@ -12,7 +12,7 @@ header {
   background-image: url("../Images/digigemas.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh; /* Ocupa toda la altura de la ventana */
+  height: 100vh;
 }
 nav {
   display: flex;
@@ -127,16 +127,36 @@ span {
 }
 
 .container-main {
-  display: flex;
-  width: 90%;
-}
-
-.container-cont {
-  align-items: flex-start;
-}
-
-.aside-info {
-  align-items: flex-end;
-  width: 100%;
+  margin-top: 40px;
   height: 100%;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". ."
+    ". .";
+}
+
+.container-main > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BigImage {
+  width: 800px;
+  height: 400px;
+}
+
+.ImageI {
+  width: 800px;
+  height: 450px;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  width: 300px;
 }
