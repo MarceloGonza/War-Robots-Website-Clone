@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin-top: 60px;
 }
 
 header {
@@ -27,8 +28,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
+  background-color: rgb(36, 36, 39);
 }
 
 .logo {
@@ -135,19 +140,29 @@ span {
 }
 
 .title-latest {
-  margin-top: 15px;
+  width: 90%;
+  padding-top: 40px;
+  margin-left: 60px;
+  color: rgb(248, 212, 8);
+  font-weight: 600;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  background-color: rgb(48, 47, 46);
 }
 
 .container-main {
+  height: 100%;
+  width: 90%;
+  margin-left: 60px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: auto auto;
   gap: 20px;
   padding: 20px;
+  background-color: rgb(48, 47, 46);
   align-items: start;
 }
 
@@ -208,9 +223,32 @@ span {
   display: inline-block;
   margin-right: 10px;
   font-size: 12px;
+  padding: 1px;
 }
 
 .infoImage h4 {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
+
+.infoImage1 {
+  position: absolute;
+  bottom: 10px;
+  left: 340px;
+  right: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.infoImage1 span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+  padding: 1px;
+}
+
+.infoImage1 h4 {
   margin: 5px 0 0 0;
   font-size: 14px;
 }
@@ -240,4 +278,13 @@ aside {
 .aside-info h4 {
   margin: 5px 0 0 0;
   font-size: 14px;
+}
+
+.yellow {
+  background-color: rgb(248, 212, 8);
+  color: black;
+}
+
+.transparent {
+  opacity: 0.4;
 }
