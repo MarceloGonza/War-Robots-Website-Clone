@@ -1,11 +1,10 @@
+/* Reset general */
 * {
-  color: white;
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: rgb(36, 36, 39);
   color: white;
@@ -13,33 +12,39 @@ body {
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  margin-top: 60px;
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
+  margin-top: 60px; /* Espacio para el nav fijo */
 }
 
+/* Header */
 header {
   background-image: url("../Images/digigemas.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
+  width: 100%;
+  overflow: hidden; /* Previene desbordamientos */
 }
+
+/* Nav */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
   background-color: rgb(36, 36, 39);
+  z-index: 10;
+  padding-left: 10px;
 }
 
 .logo {
   width: 8%;
   height: auto;
-  margin-left: 10px;
+  margin-top: 8px;
 }
 
 .lista {
@@ -61,6 +66,33 @@ li {
   font-weight: 400;
 }
 
+li a {
+  color: white;
+}
+
+.language {
+  gap: 10px;
+}
+
+.lenguageEn {
+  color: white;
+}
+
+.logoP {
+  position: relative;
+  right: 20px;
+  top: 14px;
+}
+
+.logoF {
+  position: relative;
+  left: 6px;
+}
+
+.download {
+  padding: 22px;
+}
+
 nav div:last-child {
   display: flex;
   align-items: center;
@@ -72,21 +104,26 @@ nav div:last-child {
   width: 17px;
   height: 17px;
 }
+
 .logoF {
   width: 10px;
   height: 10px;
 }
+
 button {
-  padding: 21px 33px;
+  padding: 15px 25px;
   background-color: rgb(248, 212, 8);
   color: black;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 
 a {
   text-decoration: none;
   font-size: 13px;
 }
+
 span {
   gap: 10px;
   padding: 10px 5px;
@@ -94,6 +131,7 @@ span {
   bottom: 3px;
 }
 
+/* Header content */
 .principal {
   width: 100%;
   height: 100%;
@@ -111,16 +149,14 @@ span {
   margin-top: -60px;
 }
 
-.title {
+.title,
+.titleDos {
   font-size: 80px;
   font-weight: 800;
   margin: 0;
 }
 
 .titleDos {
-  font-size: 80px;
-  font-weight: 800;
-  margin: 0 0 10px 0;
   margin-top: -20px;
 }
 
@@ -136,109 +172,63 @@ span {
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  margin-top: 0px;
 }
 
+/* Latest section */
 .title-latest {
-  width: 90%;
-  padding-top: 40px;
-  margin-left: 60px;
   color: rgb(248, 212, 8);
   font-weight: 600;
-  margin-top: 50px;
+  width: 90%; /* Coincidir con el ancho de .container-main */
+  margin: 50px auto 0 auto; /* Centrado horizontal con auto */
+  padding: 20px; /* Espaciado interno para darle mejor presentación */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  background-color: rgb(48, 47, 46);
+  background-color: rgb(48, 47, 46); /* Igual al contenedor principal */
+  border-radius: 5px; /* Opcional, para que tenga un diseño uniforme */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional, para resaltar */
 }
 
+/* Main container */
 .container-main {
-  height: 100%;
-  width: 90%;
-  margin-left: 60px;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: auto auto;
   gap: 20px;
   padding: 20px;
   background-color: rgb(48, 47, 46);
-  align-items: start;
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.container-main h1 {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.images-section {
-  display: grid;
-  grid-template-rows: 3fr 1fr;
-  gap: 10px;
-}
-
-.BigImage {
-  position: relative;
-}
-
-.BigImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.small-images {
-  display: flex;
-  gap: 10px;
-}
-
-.SmallImageI,
-.SmallImageII {
-  flex: 1;
-  position: relative;
-}
-
+.BigImage img,
 .SmallImageI img,
 .SmallImageII img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
 }
 
-.infoImage {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-}
-
-.infoImage span {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 12px;
-  padding: 1px;
-}
-
-.infoImage h4 {
-  margin: 5px 0 0 0;
-  font-size: 14px;
+/* Big Image */
+.BigImage {
+  position: relative;
+  width: 100%;
 }
 
 .infoImage1 {
   position: absolute;
   bottom: 10px;
-  left: 340px;
-  right: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   padding: 10px;
   border-radius: 5px;
-  color: white;
 }
 
 .infoImage1 span {
@@ -253,6 +243,42 @@ span {
   font-size: 14px;
 }
 
+/* Small images */
+.small-images {
+  display: flex;
+}
+
+.SmallImageI,
+.SmallImageII {
+  flex: 1;
+  position: relative;
+}
+
+.infoImage {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+}
+
+.infoImage span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 12px;
+  padding: 1px;
+}
+
+.infoImage h4 {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
+
+/* Aside section */
 aside {
   display: flex;
   flex-direction: column;
@@ -280,6 +306,7 @@ aside {
   font-size: 14px;
 }
 
+/* General styles */
 .yellow {
   background-color: rgb(248, 212, 8);
   color: black;
