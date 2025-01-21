@@ -12,8 +12,8 @@ body {
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita desbordamiento horizontal */
-  margin-top: 60px; /* Espacio para el nav fijo */
+  overflow-x: hidden;
+  margin-top: 60px;
 }
 
 /* Header */
@@ -24,7 +24,7 @@ header {
   background-position: center;
   height: 100vh;
   width: 100%;
-  overflow: hidden; /* Previene desbordamientos */
+  overflow: hidden;
 }
 
 /* Nav */
@@ -124,11 +124,12 @@ a {
   font-size: 13px;
 }
 
+/* Ajuste general para span */
+
 span {
-  gap: 10px;
-  padding: 10px 5px;
-  position: relative;
-  bottom: 3px;
+  padding: 0;
+  position: static;
+  gap: 0;
 }
 
 /* Header content */
@@ -178,19 +179,19 @@ span {
 .title-latest {
   color: rgb(248, 212, 8);
   font-weight: 600;
-  width: 90%; /* Coincidir con el ancho de .container-main */
-  margin: 50px auto 0 auto; /* Centrado horizontal con auto */
-  padding: 20px; /* Espaciado interno para darle mejor presentación */
+  width: 90%;
+  margin: 50px auto 0 auto;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  background-color: rgb(48, 47, 46); /* Igual al contenedor principal */
-  border-radius: 5px; /* Opcional, para que tenga un diseño uniforme */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional, para resaltar */
+  background-color: rgb(48, 47, 46);
+  border-radius: 5px;
 }
 
 /* Main container */
+
 .container-main {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -203,6 +204,7 @@ span {
 }
 
 /* Images */
+
 img {
   max-width: 100%;
   height: auto;
@@ -257,9 +259,8 @@ img {
 .infoImage {
   position: absolute;
   bottom: 10px;
-  left: 50%;
+  left: 27%;
   transform: translateX(-50%);
-  text-align: center;
   padding: 5px;
   border-radius: 5px;
   color: white;
@@ -279,39 +280,76 @@ img {
 }
 
 /* Aside section */
+
 aside {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-  padding-top: 10px;
+  gap: 20px;
+  padding: 0;
 }
 
 .aside-info {
-  text-align: left;
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.aside-info span {
+.item-1 {
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.item-1 .line {
+  height: 0.7px;
+  background-color: white;
+  opacity: 0.4;
+  margin-right: 15px;
+}
+
+.item-1 span {
   display: inline-block;
-  margin-right: 10px;
   font-size: 12px;
+  color: white;
+  margin-top: 30px;
+  background-color: transparent;
+  padding: 0 20px;
+  white-space: nowrap;
 }
 
-.aside-info h4 {
-  margin: 5px 0 0 0;
+.item-1 span.yellow {
+  background-color: rgb(248, 212, 8);
+  color: black;
+  padding: 1px 20px;
+  border-radius: 3px;
+}
+
+.item-1 h4 {
+  margin: 10px 0 0;
   font-size: 14px;
+  color: white;
+  flex-basis: 100%;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 1px;
 }
 
 /* General styles */
+
 .yellow {
   background-color: rgb(248, 212, 8);
   color: black;
 }
 
 .transparent {
-  opacity: 0.4;
+  opacity: 0.6;
 }
