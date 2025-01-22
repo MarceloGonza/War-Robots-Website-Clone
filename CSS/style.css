@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(36, 36, 39);
+  background-color: rgb(23, 23, 24);
   color: white;
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
@@ -76,12 +76,13 @@ li a {
 
 .lenguageEn {
   color: white;
+  padding: 5px;
 }
 
 .logoP {
   position: relative;
   right: 20px;
-  top: 14px;
+  top: 18px;
 }
 
 .logoF {
@@ -343,6 +344,81 @@ aside {
   padding: 1px;
 }
 
+.container-button .newsBottom {
+  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(255, 230, 5);
+  width: 40%;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* section samjob */
+.imageEnd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(48, 47, 46);
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.imageSanjob {
+  margin-top: 30px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.imageEnd h2 {
+  position: relative;
+  color: rgb(248, 212, 8);
+  font-weight: 900;
+  font-size: 40px;
+  z-index: 3;
+  bottom: 570px;
+}
+
+.imageEnd div {
+  z-index: 3;
+  width: 20%;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 250px;
+  right: 400px;
+}
+
+.imageEnd p {
+  gap: 3px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.imageEnd button {
+  width: 50%;
+  margin-top: 20px;
+  padding: 5px 5px;
+  background-color: transparent;
+  border: 2px solid rgb(255, 230, 5);
+  color: white;
+}
+
+.imageEnd .backgroundTrasparent {
+  background-color: black;
+  opacity: 0.4;
+  width: 40px;
+  height: 40px;
+}
 /* General styles */
 
 .yellow {
