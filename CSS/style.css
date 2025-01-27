@@ -402,6 +402,8 @@ aside {
   gap: 3px;
   font-weight: 300;
   font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .imageEnd button {
