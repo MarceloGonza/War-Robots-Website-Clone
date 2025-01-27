@@ -413,12 +413,18 @@ aside {
   color: white;
 }
 
-.imageEnd .backgroundTrasparent {
-  background-color: black;
-  opacity: 0.4;
-  width: 40px;
-  height: 40px;
+.imageEnd .textContainer {
+  padding: 35px 30px 25px 30px;
+  height: 191px;
+  width: 340px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+  color: white;
+  text-align: center;
 }
+
 /* General styles */
 
 .yellow {
