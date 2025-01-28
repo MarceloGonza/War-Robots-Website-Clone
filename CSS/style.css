@@ -361,70 +361,50 @@ aside {
 
 /* section samjob */
 .imageEnd {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 10fr;
+  gap: 20px;
   background-color: rgb(48, 47, 46);
   width: 90%;
   max-width: 100%;
   margin: 0 auto;
 }
-.imageSanjob {
-  margin-top: 30px;
-  height: 100%;
-  width: 100%;
-  opacity: 0.6;
-  z-index: 1;
-}
 
-.imageEnd h2 {
-  position: relative;
-  color: rgb(248, 212, 8);
-  font-weight: 900;
-  font-size: 40px;
+.textContainer {
+  background-color: rgba(48, 47, 46, 0.644);
   z-index: 3;
-  bottom: 570px;
-}
-
-.imageEnd div {
-  z-index: 3;
-  width: 20%;
-  height: 20px;
-  display: flex;
+  display: inline-block;
+  align-items: flex-start;
   flex-direction: column;
+  width: 350px;
   position: relative;
-  bottom: 250px;
-  right: 400px;
+  bottom: 270px;
+  gap: 2px;
+  padding: 30px 50px 20px 50px;
+  text-align: start;
+  font-size: 12px;
+  font-weight: 400;
 }
 
-.imageEnd p {
-  gap: 3px;
+.textContainer h3 {
+  font-size: 22px;
+}
+
+.textContainer button {
   font-weight: 300;
-  font-size: 14px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.imageEnd button {
-  width: 50%;
-  margin-top: 20px;
-  padding: 5px 5px;
+  font-size: 11px;
+  color: white;
   background-color: transparent;
   border: 2px solid rgb(255, 230, 5);
-  color: white;
-}
-
-.imageEnd .textContainer {
-  padding: 35px 30px 25px 30px;
-  height: 191px;
-  width: 340px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
-  color: white;
+  width: 50%;
+  height: 25%;
+  margin-top: 20px;
   text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 /* General styles */
